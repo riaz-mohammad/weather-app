@@ -1,0 +1,30 @@
+
+<ng-container *ngIf="weatherDetail$ | async as weatherDetail">
+
+    <app-detail iconPath="max_temp" 
+                [data]="weatherDetail.max_temp.toFixed()">
+      MAX-TEMPERATURE
+    </app-detail>
+
+    <app-detail iconPath="min_temp" 
+                [data]="weatherDetail.min_temp.toFixed()">
+      MIN-TEMPERATURE
+    </app-detail>
+
+    <app-detail iconPath="wind_speed" 
+                [data]="weatherDetail.wind_speed.toFixed() + 'mph'">
+      WIND SPEED
+    </app-detail>
+
+    <app-detail iconPath="wind_direction_compass" 
+                [data]="weatherDetail.wind_direction.toFixed() + 'deg' + 
+                ' | ' + weatherDetail.wind_direction_compass">
+      WIND DIRECTION
+    </app-detail>
+
+    <app-detail iconPath="humidity" 
+                [data]="weatherDetail.humidity + '%'">
+      HUMIDITY
+    </app-detail>
+
+</ng-container>
