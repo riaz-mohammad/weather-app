@@ -1,0 +1,65 @@
+:host{
+  flex-basis: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;  
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+
+img{
+  border-radius: 100%;
+}
+.weather-state{
+  flex-basis: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  h2{
+    font-size: 1.8rem;
+  }
+  img{
+    width: 70px;
+    height: 70px;
+  }
+}
+
+.weather{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(0, 0, 0);
+  border-radius: 30px;
+  img{
+    width: 100px;
+    height: 100px;
+    
+  }
+
+  h1{
+    position: relative;
+    height: 50%;
+    right: -25px;
+    font-size: 3rem;
+    margin: 0;
+  }
+}
+
+
+.sun-rise-set{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  position: relative;
+  margin-top: 20px;
+  img{
+    width: 50px;
+    height: 50px;
+  }
+}
+
+

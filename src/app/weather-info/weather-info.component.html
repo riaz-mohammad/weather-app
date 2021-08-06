@@ -1,0 +1,30 @@
+<ng-container *ngIf="weatherData$ | async as weatherData">
+
+      <h1>
+        <span class="white-text">{{weatherData.title}}</span> / {{weatherData.parent.title}}
+      </h1>
+      <div class="weather-state">
+      <h4>
+        {{ weatherData.consolidated_weather.applicable_date| date:'fullDate'}} 
+        </h4>
+      </div>
+      <div class="weather">
+        <img [src]="imagePath + weatherData.consolidated_weather.weather_state_name + '.png'">
+        <h2>{{ weatherData.consolidated_weather.weather_state_name}}</h2>
+        <h1>{{ weatherData.consolidated_weather.the_temp.toFixed()}}</h1>
+        <img [src]="imagePath + 'Temperature Sign.png'">
+      </div>
+      <p>Timezone {{ weatherData.timezone}}</p>
+      
+      <!-- <p>{{ weatherData.time | date:'medium'}}</p> -->
+      <div class="sun-rise-set">
+        
+        <img [src]="imagePath + 'Sun Rise.png'">
+        <p>Sun Rise: {{weatherData.sun_rise | date:'h:mm a' }}</p>
+        <img [src]="imagePath + 'Sun Set.png'">
+        <p>Sun Set: {{weatherData.sun_set | date:'h:mm a'}}</p>
+      </div>
+   
+</ng-container>
+
+
