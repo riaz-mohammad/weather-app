@@ -9,6 +9,9 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { SearchInputComponent } from './search-input/search-input.component';
 import { WeatherComponent } from './weather/weather.component';
+import { WeatherInfoComponent } from './weather-info/weather-info.component';
+import { WeekWeatherComponent } from './week-weather/week-weather.component';
+import { WeatherDetailComponent } from './weather-detail/weather-detail.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +19,9 @@ import { WeatherComponent } from './weather/weather.component';
     HeaderComponent,
     SearchInputComponent,
     WeatherComponent,
+    WeatherDetailComponent,
+    WeatherInfoComponent,
+    WeekWeatherComponent
   ],
   imports: [
     BrowserModule,
