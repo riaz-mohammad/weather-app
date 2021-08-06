@@ -7,12 +7,13 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
-
+import { SearchInputComponent } from './search-input/search-input.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent
+    HeaderComponent,
+    SearchInputComponent,
   ],
   imports: [
     BrowserModule,

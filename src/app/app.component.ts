@@ -1,5 +1,6 @@
 
 import { Component } from '@angular/core';
+import { WeatherDataService } from './weather-data.service';
 
 
 
@@ -9,5 +10,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  
+  public weatherData$ = this.weatherDataService.weatherData$;
+  constructor(private weatherDataService: WeatherDataService) {}
 }
