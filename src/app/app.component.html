@@ -6,5 +6,8 @@
 
 <app-search-input></app-search-input>
 
+<!-- The component that will show all the weather data -->
+<app-weather *ngIf="weatherData$ | async"></app-weather>
+
 
 

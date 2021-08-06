@@ -1,0 +1,29 @@
+:host{
+  flex-basis: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgba(255, 255, 255, 0.699);
+  padding-top: 30px;
+  border-radius: 30px;
+  position: relative;
+}
+
+.container{
+  display: flex;  
+  flex-basis: 80%;
+  border-radius: 30px;
+  background-color: rgba(0, 0, 0, 0.288);
+  position: relative;
+
+  &::after{
+    position: absolute;
+    content: '';
+    width: 1px;
+    height: 50%;
+    left: 50%;
+    top: 25%;
+    background-color: white;
+  }
+}
