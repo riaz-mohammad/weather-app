@@ -1,0 +1,11 @@
+<ng-container *ngIf="weekWeather$ | async as weekWeather">
+  <ul @daysWeather>
+    <li *ngFor="let day of weekWeather.consolidated_weather" (click)="weekDayWeather(day, weekWeather)">
+       {{day.applicable_date | date}} 
+       <div class="weather">
+          <h3>{{day.the_temp.toFixed()}}</h3>
+          <img src="../../assets/Temperature Sign.png">
+       </div>
+    </li>
+  </ul>
+</ng-container>
