@@ -1,0 +1,8 @@
+{
+  "/api/*": {
+    "target": "https://www.metaweather.com/api",
+    "secure": false,
+     "changeOrigin" : true,
+     "logLevel": "debug"
+  }
+}
