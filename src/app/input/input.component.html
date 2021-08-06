@@ -1,0 +1,43 @@
+<p class="loading" *ngIf="weatherDataService.httpPending$ | async as loading" @loading>
+  {{loading}}
+</p>
+
+<form [formGroup]="search" (ngSubmit)="onSubmit()">
+  <!-- The showInput flag is required so the input has the animation effect on intro and hidden initially -->
+  <!--  -->
+  <div class="input-container" *ngIf="showInput"
+       @inputAnimation>
+    <input formControlName="city"
+            placeholder="City..."/>
+    <!-- moveLabelUp class is applied when input has a value, so the label stay up, after losing the focus -->
+    <label [class.moveLabelUp]="city.value">
+      City
+    </label>
+
+  </div>
+   
+
+  <!-- The button is just for the design purpose -->
+  <button type="submit" [@buttonAnimation]="!showInput">
+    {{ buttonTextState }}
+  </button>
+    
+</form>
+
+<!-- The drop-down with searched city name -->
+
+  <ng-container *ngIf="locationSearched | async as locations">
+      
+        <ul class="searched-city" @searchedCity *ngIf="showList">
+          <li *ngFor="let location of locations" (click)="locationWeather(location)"
+              [class.similarInitials]="city.value === (location.title.toLowerCase() | slice:0:city.value.length)">
+            {{ location.title }}
+          </li>
+
+            <li *ngIf="!(locations.length) && city.value"> No result...</li>
+        </ul>
+    
+  </ng-container>
+
+  
+  

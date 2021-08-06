@@ -1,0 +1,128 @@
+$border-radius: 30px;
+:host{
+  flex-basis: 50%;
+  border-radius: $border-radius;
+  position: relative;
+  z-index: 99;
+}
+
+  .loading{
+    position: absolute;
+    width: 100%;
+    top: 100%;
+    text-align: center;
+    color: white;
+  }
+
+  .searched-city{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    position: absolute;
+    top: 0%;
+    left: 0;
+    width: 78%;
+    max-height: 300px;
+    padding-top: 50px;
+    box-sizing: border-box;
+    border-radius: $border-radius;
+    background-color: white;
+    z-index: -99;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    }
+    li{
+      padding: 10px;
+      padding-left: 25px;
+      cursor: pointer;
+      transition: all 100ms ease;
+      font-size: .8rem;
+      &:hover{
+        background-color: rgba(0, 0, 0, 0.377);
+        color: white;
+    }
+   &.similarInitials{
+     font-weight: bold;
+   }
+   }
+
+
+
+
+form{
+  display: flex;
+  height: 50px;
+  overflow: hidden;
+  border-radius: $border-radius;
+  position: relative;
+  .input-container{
+    flex-basis: 100%;
+  }
+
+
+
+  input{
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    padding-left: 22px;
+
+    &:focus +label{
+      color: grey;
+      top: 0;
+      font-size: .7rem;
+    }
+
+    &::placeholder{
+      color: transparent;
+    }
+
+    &:focus::placeholder{
+      color: black;
+    }
+  }
+  button{
+    position: absolute;
+    right: 30%;
+    width: 40%;
+    height: 100%;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    overflow: hidden;
+    z-index: 99;
+    transition: all 400ms ease;
+    &:hover::after{
+       width: 100%;
+    }
+
+    &:hover{
+      background-color: rgba(0, 0, 0, 0.719);
+    }
+  }
+
+  
+  label{
+    position: absolute;
+    top: 28%;
+    left: 22px;
+    font-size: 1rem;
+    transition: all 300ms ease;
+
+    &.moveLabelUp{
+      top: 0;
+      font-size: .7rem;
+    }
+  }
+}
+   
+
+
+form  input, button{
+  outline: none;
+  border: none;
+  border-radius: $border-radius;
+  box-shadow: 5px 5px 10px 1px rgba(0, 0, 0, 0.164);
+}
